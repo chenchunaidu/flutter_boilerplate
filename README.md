@@ -9,6 +9,13 @@ Flutter boilerplate is a base setup that can be used for building all new flutte
 3. Custom components
 4. State management
 5. Minimum setup required for all flutter applications
+6. Basic Layout
+
+## Components
+
+1. VStack - Wrapper around Column provides spacing property additionally
+2. HStack - Wrapper around Row provides spacing property additionally
+3. BorderedImage - Wrapper Image component Row provides border radius property additionally
 
 ## UI Elements
 
