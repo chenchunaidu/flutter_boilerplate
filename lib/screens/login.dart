@@ -29,7 +29,7 @@ class Login extends StatelessWidget {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(),
                   onPressed: () {
-                    Get.toNamed('/home');
+                    Get.offNamed('/home');
                   },
                   child: const Text(
                     "Login",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/components/layout/get-page-wrapper.dart';
+import 'package:flutter_biolerlate/layout/auth.dart';
+import 'package:flutter_biolerlate/layout/get-page-wrapper.dart';
 import 'package:flutter_biolerlate/screens/account.dart';
 import 'package:flutter_biolerlate/screens/calendar.dart';
 import 'package:flutter_biolerlate/screens/content.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         PageWrapper(path: '/calendar', child: Calendar()),
         PageWrapper(path: '/profile', child: Account())
       ]),
+      routingCallback: routingCallback,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
