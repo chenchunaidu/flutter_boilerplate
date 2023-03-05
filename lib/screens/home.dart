@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/image.dart';
+import 'package:flutter_biolerlate/components/vstack.dart';
 import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:flutter_biolerlate/theme/inset.dart';
 
@@ -15,7 +16,7 @@ class Home extends StatelessWidget {
         body: Padding(
           padding: EdgeInsets.all(Insets.lg),
           child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              VStack(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const Text(
               "Heading 1",
               style: TextStyles.h1,
