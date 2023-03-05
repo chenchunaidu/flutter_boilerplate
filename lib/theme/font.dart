@@ -11,14 +11,14 @@ class TextStyles {
     fontFamily: Fonts.poppins,
   );
   static const TextStyle buttonText1 =
-      TextStyle(fontWeight: FontWeight.w600, fontSize: 14);
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 18);
   static const TextStyle buttonText2 =
-      TextStyle(fontWeight: FontWeight.normal, fontSize: 11);
+      TextStyle(fontWeight: FontWeight.normal, fontSize: 14);
   static const TextStyle h1 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 32);
   static const TextStyle h2 =
-      TextStyle(fontWeight: FontWeight.w600, fontSize: 20);
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 24);
   static const TextStyle h3 =
-      TextStyle(fontWeight: FontWeight.w600, fontSize: 16);
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 20);
   static late TextStyle body1 = TextStyle();
 }
