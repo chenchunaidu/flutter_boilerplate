@@ -11,9 +11,9 @@ class TextStyles {
     fontFamily: Fonts.poppins,
   );
   static const TextStyle buttonText1 =
-      TextStyle(fontWeight: FontWeight.w600, fontSize: 18);
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 16);
   static const TextStyle buttonText2 =
-      TextStyle(fontWeight: FontWeight.normal, fontSize: 14);
+      TextStyle(fontWeight: FontWeight.normal, fontSize: 12);
   static const TextStyle h1 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 32);
   static const TextStyle h2 =

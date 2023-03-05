@@ -17,7 +17,7 @@ const tabs = [
   ScaffoldWithNavBarTabItem(
       initialLocation: "/home", icon: Icon(Icons.home_filled), label: 'Home'),
   ScaffoldWithNavBarTabItem(
-      initialLocation: "/login", icon: Icon(Icons.book), label: 'Content'),
+      initialLocation: "/content", icon: Icon(Icons.book), label: 'Content'),
   ScaffoldWithNavBarTabItem(
     initialLocation: "/calendar",
     icon: Icon(Icons.calendar_month_outlined),

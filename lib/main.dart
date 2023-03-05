@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/layout/get-page-wrapper.dart';
+import 'package:flutter_biolerlate/screens/account.dart';
+import 'package:flutter_biolerlate/screens/calendar.dart';
+import 'package:flutter_biolerlate/screens/content.dart';
 import 'package:flutter_biolerlate/screens/home.dart';
 import 'package:flutter_biolerlate/screens/login.dart';
 import 'package:flutter_biolerlate/theme/color.dart';
@@ -16,10 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/home',
+      initialRoute: '/login',
       getPages: getPageWrapper([
+        PageWrapper(path: '/login', child: Login(), navbar: false),
         PageWrapper(path: '/home', child: Home()),
-        PageWrapper(path: '/login', child: Login(), navbar: false)
+        PageWrapper(path: '/content', child: Content()),
+        PageWrapper(path: '/calendar', child: Calendar()),
+        PageWrapper(path: '/profile', child: Account())
       ]),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
