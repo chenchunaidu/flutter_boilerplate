@@ -14,8 +14,11 @@ class TextStyles {
       TextStyle(fontWeight: FontWeight.w600, fontSize: 16);
   static const TextStyle buttonText2 =
       TextStyle(fontWeight: FontWeight.normal, fontSize: 12);
-  static const TextStyle h1 =
-      TextStyle(fontWeight: FontWeight.w600, fontSize: 32);
+  static const TextStyle h1 = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 32,
+      letterSpacing: 1.05,
+      height: 1.2);
   static const TextStyle h2 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 24);
   static const TextStyle h3 =

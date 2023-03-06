@@ -5,8 +5,8 @@ import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:flutter_biolerlate/theme/inset.dart';
 import 'package:get/get.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class OTP extends StatelessWidget {
+  const OTP({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,24 +19,25 @@ class Login extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const AuthInfo(
-                label: "Welcome to\nFlutter boilerplate",
-                subLabel:
-                    "Sign in to Flutter boilerplate to check all features",
+                label: "Enter OTP",
+                subLabel: "OTP has been sent to your mobile number",
               ),
               VStack(spacing: Insets.md, children: [
                 const TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(hintText: "Email"),
+                  autocorrect: false,
+                  obscureText: true,
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(hintText: "Password"),
                 ),
                 SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(),
                       onPressed: () {
-                        Get.toNamed('/otp');
+                        Get.toNamed('/home');
                       },
                       child: const Text(
-                        "Sent OTP",
+                        "Login",
                         style: TextStyles.buttonText1,
                       ),
                     ))
