@@ -30,7 +30,7 @@ Flutter boilerplate is a base setup that can be used for building all new flutte
 
 ## TODO
 
-1. Make Text fields easy
+1. Make TextFields easy
 
    a. HTML Like form submission and validation
 
