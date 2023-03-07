@@ -27,3 +27,17 @@ Flutter boilerplate is a base setup that can be used for building all new flutte
 ## Libraries and packages used
 
 1. [getx](https://pub.dev/packages/get) for state management and routing
+
+## TODO
+
+1. Make Text fields easy
+
+   a. HTML Like form submission and validation
+
+   b. Support for label text, label text, error text
+
+   c. Icon support on left and right side
+
+   d. Focus support
+
+   e. Easy edit support
