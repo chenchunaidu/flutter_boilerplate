@@ -10,7 +10,13 @@ import 'package:flutter_biolerlate/screens/otp.dart';
 import 'package:flutter_biolerlate/theme/color.dart';
 import 'package:get/get.dart';
 
+void initialize() {
+  // inject authentication controller
+  Get.put(AuthController());
+}
+
 void main() {
+  initialize();
   runApp(const MyApp());
 }
 

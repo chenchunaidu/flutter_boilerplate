@@ -5,8 +5,12 @@ import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:flutter_biolerlate/theme/inset.dart';
 import 'package:get/get.dart';
 
+import '../layout/auth.dart';
+
 class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+  Login({Key? key}) : super(key: key);
+
+  var login = Get.find<AuthController>().login;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +37,7 @@ class Login extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(),
                       onPressed: () {
+                        login();
                         Get.toNamed('/otp');
                       },
                       child: const Text(
