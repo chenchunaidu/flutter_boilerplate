@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/theme/color.dart';
 
 class Fonts {
   static const String poppins = 'Poppins';
