@@ -7,7 +7,7 @@ import 'package:flutter_biolerlate/screens/content.dart';
 import 'package:flutter_biolerlate/screens/home.dart';
 import 'package:flutter_biolerlate/screens/login.dart';
 import 'package:flutter_biolerlate/screens/otp.dart';
-import 'package:flutter_biolerlate/theme/color.dart';
+import 'package:flutter_biolerlate/theme/index.dart';
 import 'package:get/get.dart';
 
 void initialize() {
@@ -30,25 +30,16 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       getPages: getPageWrapper([
         PageWrapper(path: '/login', child: Login(), navbar: false),
-        PageWrapper(path: '/home', child: Home()),
-        PageWrapper(path: '/content', child: Content()),
-        PageWrapper(path: '/calendar', child: Calendar()),
-        PageWrapper(path: '/profile', child: Account()),
-        PageWrapper(path: "/otp", child: OTP(), navbar: false)
+        PageWrapper(path: '/home', child: const Home()),
+        PageWrapper(path: '/content', child: const Content()),
+        PageWrapper(path: '/calendar', child: const Calendar()),
+        PageWrapper(path: '/profile', child: const Account()),
+        PageWrapper(path: "/otp", child: const OTP(), navbar: false)
       ]),
       routingCallback: routingCallback,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(
-          brightness: Brightness.dark,
-          primarySwatch: red,
-          inputDecorationTheme: InputDecorationTheme(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(2),
-                borderSide: BorderSide.none,
-              ),
-              fillColor: Colors.black54,
-              filled: true)),
+      darkTheme: darkTheme,
       home: Home(),
     );
   }

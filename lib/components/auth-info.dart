@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/vstack.dart';
-import 'package:flutter_biolerlate/theme/color.dart';
 import 'package:flutter_biolerlate/theme/font.dart';
 
 class AuthInfo extends StatelessWidget {

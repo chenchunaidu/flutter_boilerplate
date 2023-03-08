@@ -29,3 +29,6 @@ const Map<int, Color> redSwatch = {
 };
 
 MaterialColor red = new MaterialColor(0xFFEF4444, redSwatch);
+
+//TODO: make it runtime
+MaterialColor brand = red;
