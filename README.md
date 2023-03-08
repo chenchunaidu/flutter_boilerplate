@@ -17,7 +17,7 @@ Flutter boilerplate is a base setup that can be used for building all new flutte
 
 Wrapper around Column provides spacing property additionally
 
-```
+```dart
 VStack(
   spacing: 8.0,
   crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +36,7 @@ VStack(
 
 Wrapper around Row provides spacing property additionally
 
-```
+```dart
 HStack(
   spacing: 8.0,
   crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,7 @@ HStack(
 
 Wrapper Image component Row provides border radius property additionally
 
-```
+```dart
 BorderedImage(
         width: double.infinity,
         height: 400,
@@ -68,7 +68,7 @@ BorderedImage(
 
 Wrapper around the flutter form for making form handling. Instead of writing flutter code everytime you can define your form in List of Map which contains all the form details like placeholder, validator, helperText CustomForm will handle everything for you.
 
-```
+```dart
 List<Map<String, dynamic>> otpForm = [
   {
     "name": "otp",
