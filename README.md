@@ -13,9 +13,97 @@ Flutter boilerplate is a base setup that can be used for building all new flutte
 
 ## Components
 
-1. VStack - Wrapper around Column provides spacing property additionally
-2. HStack - Wrapper around Row provides spacing property additionally
-3. BorderedImage - Wrapper Image component Row provides border radius property additionally
+### VStack
+
+Wrapper around Column provides spacing property additionally
+
+```
+VStack(
+  spacing: 8.0,
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+            const Text(
+              "Heading 1",
+              style: TextStyles.h1,
+            ),
+            const Text(
+              "Heading 2",
+              style: TextStyles.h2,
+            )])
+```
+
+### HStack
+
+Wrapper around Row provides spacing property additionally
+
+```
+HStack(
+  spacing: 8.0,
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+            const Text(
+              "Heading 1",
+              style: TextStyles.h1,
+            ),
+            const Text(
+              "Heading 2",
+              style: TextStyles.h2,
+            )])
+```
+
+### BorderedImage
+
+Wrapper Image component Row provides border radius property additionally
+
+```
+BorderedImage(
+        width: double.infinity,
+        height: 400,
+        fit: BoxFit.cover,
+        borderRadius: 4.0,
+        url:"url")
+```
+
+### CustomForm
+
+Wrapper around the flutter form for making form handling. Instead of writing flutter code everytime you can define your form in List of Map which contains all the form details like placeholder, validator, helperText CustomForm will handle everything for you.
+
+```
+List<Map<String, dynamic>> otpForm = [
+  {
+    "name": "otp",
+    "placeholder": "OTP",
+    "validator": ValidationBuilder(requiredMessage: "OTP is required").build(),
+    "helperText": "OTP is 12345 😃",
+    "autocorrect": false,
+    "obscureText": true,
+  }
+];
+
+class OTPForm extends StatelessWidget {
+  OTPForm({Key? key}) : super(key: key);
+
+  final login = Get.find<AuthController>().login;
+  @override
+  Widget build(BuildContext context) {
+    return CustomForm(
+      fields: otpForm,
+      onSubmit: (value) {
+        print(value);
+        if (value["otp"] == "12345") {
+          login();
+          Get.toNamed('/home');
+        }
+      },
+      submitButtonChild: const Text(
+        "Login",
+        style: TextStyles.buttonText1,
+      ),
+    );
+  }
+}
+
+```
 
 ## UI Elements
 
