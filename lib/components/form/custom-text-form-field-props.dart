@@ -23,7 +23,7 @@ class CustomTextFormFieldProps<T> {
       this.obscureText,
       this.helperText,
       this.autocorrect});
-
+  // TODO: Type safety for map
   factory CustomTextFormFieldProps.fromJson(Map<String, dynamic> json) =>
       CustomTextFormFieldProps(
           placeholder: json["placeholder"] as String,

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_biolerlate/theme/font.dart';
 
 InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
     errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(2),
     ),
+    errorStyle: TextStyles.buttonText2.copyWith(fontWeight: FontWeight.w600),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(2),
       borderSide: BorderSide.none,

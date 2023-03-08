@@ -33,6 +33,7 @@ class _CustomFormState extends State<CustomForm> {
         VStack(
             children: widget.fields.map((e) {
           var formFieldData = CustomTextFormFieldProps.fromJson(e);
+          // TODO: Support for date and image input types
           return TextFormField(
             onSaved: (newValue) {
               setState(() {
