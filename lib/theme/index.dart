@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/theme/color.dart';
-import 'package:flutter_biolerlate/theme/input.dart';
+import 'package:flutter_boilerplate/theme/color.dart';
+import 'package:flutter_boilerplate/theme/input.dart';
 
 ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,

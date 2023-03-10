@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/components/auth-info.dart';
-import 'package:flutter_biolerlate/components/login-form.dart';
-import 'package:flutter_biolerlate/components/common/vstack.dart';
-import 'package:flutter_biolerlate/theme/inset.dart';
+import 'package:flutter_boilerplate/components/auth-info.dart';
+import 'package:flutter_boilerplate/components/login-form.dart';
+import 'package:flutter_boilerplate/components/common/vstack.dart';
+import 'package:flutter_boilerplate/theme/inset.dart';
 import 'package:get/get.dart';
 
 class Login extends StatelessWidget {

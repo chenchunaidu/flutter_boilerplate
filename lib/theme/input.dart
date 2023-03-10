@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/theme/font.dart';
+import 'package:flutter_boilerplate/theme/font.dart';
 
 InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
     errorBorder: OutlineInputBorder(

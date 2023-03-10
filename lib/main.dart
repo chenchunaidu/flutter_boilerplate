@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/layout/get-page-wrapper.dart';
-import 'package:flutter_biolerlate/screens/account.dart';
-import 'package:flutter_biolerlate/screens/calendar.dart';
-import 'package:flutter_biolerlate/screens/content.dart';
-import 'package:flutter_biolerlate/screens/home.dart';
-import 'package:flutter_biolerlate/screens/login.dart';
-import 'package:flutter_biolerlate/screens/otp.dart';
-import 'package:flutter_biolerlate/theme/index.dart';
+import 'package:flutter_boilerplate/layout/get-page-wrapper.dart';
+import 'package:flutter_boilerplate/screens/account.dart';
+import 'package:flutter_boilerplate/screens/calendar.dart';
+import 'package:flutter_boilerplate/screens/content.dart';
+import 'package:flutter_boilerplate/screens/home.dart';
+import 'package:flutter_boilerplate/screens/login.dart';
+import 'package:flutter_boilerplate/screens/otp.dart';
+import 'package:flutter_boilerplate/theme/index.dart';
 import 'package:get/get.dart';
-import 'package:flutter_biolerlate/helpers/auth.dart';
+import 'package:flutter_boilerplate/helpers/auth.dart';
 
 void initialize() {
   // inject authentication controller
