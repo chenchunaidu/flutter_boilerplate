@@ -59,7 +59,7 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(height: 50, child: Container()),
-      body: Padding(padding: EdgeInsets.all(Insets.lg), child: widget.child),
+      body: Padding(padding: EdgeInsets.all(Insets.xl), child: widget.child),
       bottomNavigationBar: widget.navbar ?? true
           ? BottomNavigationBar(
               showUnselectedLabels: true,

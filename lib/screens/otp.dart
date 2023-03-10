@@ -18,20 +18,19 @@ class _OtpState extends State<OTP> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(Insets.xl),
         child:
             VStack(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          VStack(
-            spacing: Insets.xxl,
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const AuthInfo(
-                label: "Enter OTP",
-                subLabel: "OTP has been sent to your mobile number",
-              ),
-              OTPForm()
-            ],
-          )
-        ]));
+      VStack(
+        spacing: Insets.xxl,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const AuthInfo(
+            label: "Enter OTP",
+            subLabel: "OTP has been sent to your mobile number",
+          ),
+          OTPForm()
+        ],
+      )
+    ]));
   }
 }
