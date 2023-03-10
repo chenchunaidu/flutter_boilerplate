@@ -46,7 +46,7 @@ class Home extends StatelessWidget {
                   style: TextStyles.buttonText2,
                 )),
             const BorderedImage(
-                width: double.infinity,
+                width: 300,
                 height: 400,
                 fit: BoxFit.cover,
                 url:

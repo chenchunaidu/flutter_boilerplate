@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/form/validators.dart';
 
-typedef CustomFormFields = List<Map<String, dynamic>>;
-
 class CustomTextFormFieldProps<T> {
   final String? placeholder;
   // TODO: Allow generic properties;

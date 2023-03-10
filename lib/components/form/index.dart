@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/vstack.dart';
 import '../../theme/inset.dart';
 import './custom-text-form-field-props.dart';
+import 'custom-form-field.dart';
 
 typedef FormSubmitClick<T> = void Function(dynamic? value);
 
@@ -12,7 +13,7 @@ class CustomForm extends StatefulWidget {
       {Key? key, required this.fields, this.submitButtonChild, this.onSubmit})
       : super(key: key);
 
-  final CustomFormFields fields;
+  final List<CustomFormFieldProps> fields;
   final Widget? submitButtonChild;
   final FormSubmitClick? onSubmit;
 
@@ -32,22 +33,13 @@ class _CustomFormState extends State<CustomForm> {
       child: VStack(spacing: Insets.md, children: [
         VStack(
             children: widget.fields.map((e) {
-          var formFieldData = CustomTextFormFieldProps.fromJson(e);
-          // TODO: Support for date and image input types
-          return TextFormField(
-            onSaved: (newValue) {
-              setState(() {
-                formData[formFieldData.name] = newValue;
+          return CustomFormField(
+              props: e,
+              onSaved: (newValue, key) {
+                setState(() {
+                  formData[key] = newValue;
+                });
               });
-            },
-            keyboardType: formFieldData.keyboardType,
-            validator: formFieldData.validator,
-            obscureText: formFieldData.obscureText ?? false,
-            autocorrect: formFieldData.autocorrect ?? false,
-            decoration: formFieldData.decoration!.copyWith(
-                hintText: formFieldData.placeholder,
-                helperText: formFieldData.helperText),
-          );
         }).toList()),
         SizedBox(
             width: double.infinity,
