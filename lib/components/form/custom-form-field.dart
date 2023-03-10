@@ -1,5 +1,5 @@
+import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import './custom-text-form-field-props.dart';
 
 typedef CustomFormFieldProps = Map<String, dynamic>;
@@ -32,6 +32,18 @@ class CustomFormField extends StatelessWidget {
         decoration: formFieldData.decoration!.copyWith(
             hintText: formFieldData.placeholder,
             helperText: formFieldData.helperText),
+      );
+    } else if (props["type"] == FormFieldType.date) {
+      var formFieldData = CustomTextFormFieldProps.fromJson(props);
+      return DateTimePicker(
+        initialValue: '',
+        dateLabelText: formFieldData.placeholder,
+        validator: formFieldData.validator,
+        firstDate: DateTime(1900),
+        lastDate: DateTime(2100),
+        onSaved: (value) {
+          onSaved!(value, formFieldData.name);
+        },
       );
     }
     return Container();

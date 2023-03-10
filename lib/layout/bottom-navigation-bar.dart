@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../theme/inset.dart';
 import 'app-bar.dart';
 
 class ScaffoldWithNavBarTabItem extends BottomNavigationBarItem {
@@ -58,7 +59,7 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(height: 50, child: Container()),
-      body: widget.child,
+      body: Padding(padding: EdgeInsets.all(Insets.lg), child: widget.child),
       bottomNavigationBar: widget.navbar ?? true
           ? BottomNavigationBar(
               showUnselectedLabels: true,
