@@ -1,6 +1,20 @@
 # Flutter boilerplate
 
-Flutter boilerplate is a base setup that can be used for building all new flutter application.
+Flutter boilerplate is a base setup that can be used for building all new flutter applications.
+
+## Folder Structure
+
+- Components
+  - common
+  - all other screen components
+- Helpers
+  - helpers required for purpose
+- Layout
+  - Provides layout components like bottom navigation wrapper
+- Screens
+  - All screens components will lie here
+- Theme
+  - All theme data lies here
 
 ## Features
 
@@ -8,8 +22,21 @@ Flutter boilerplate is a base setup that can be used for building all new flutte
 2. Authentication
 3. Custom components
 4. State management
-5. Minimum setup required for all flutter applications
-6. Basic Layout
+
+### Basic Layout
+
+Flutter boilerplate comes with basic layout which supports scaffold along with bottom navigation bar you can pass a argument to hide navigation
+
+```dart
+      getPages: getPageWrapper([
+        PageWrapper(path: '/login', child: Login(), navbar: false),
+        PageWrapper(path: '/home', child: const Home()),
+        PageWrapper(path: '/content', child: const Content()),
+        PageWrapper(path: '/calendar', child: const Calendar()),
+        PageWrapper(path: '/profile', child: const Account()),
+        PageWrapper(path: "/otp", child: const OTP(), navbar: false)
+      ]),
+```
 
 ## Components
 
@@ -108,7 +135,7 @@ class OTPForm extends StatelessWidget {
 
 ```
 
-## UI Elements
+## Theme elements
 
 1. Custom Colors
 2. Font sizes
@@ -118,3 +145,5 @@ class OTPForm extends StatelessWidget {
 ## Libraries and packages used
 
 1. [getx](https://pub.dev/packages/get) for state management and routing
+2. [form_validator](https://pub.dev/packages/form_validator) for validating the forms
+3. [date_time_picker](https://pub.dev/packages/date_time_picker) for date input
