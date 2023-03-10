@@ -71,6 +71,7 @@ Wrapper around the flutter form for making form handling. Instead of writing flu
 ```dart
 List<Map<String, dynamic>> otpForm = [
   {
+    "type": FormFieldType.text,
     "name": "otp",
     "placeholder": "OTP",
     "validator": ValidationBuilder(requiredMessage: "OTP is required").build(),

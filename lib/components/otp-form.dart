@@ -3,11 +3,13 @@ import 'package:flutter_biolerlate/components/form/index.dart';
 import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:get/get.dart';
+import 'form/custom-form-field.dart';
 import 'form/validators.dart';
 import '../helpers/auth.dart';
 
 List<Map<String, dynamic>> otpForm = [
   {
+    "type": FormFieldType.text,
     "name": "otp",
     "placeholder": "OTP",
     "validator": ValidationBuilder(requiredMessage: "OTP is required").build(),

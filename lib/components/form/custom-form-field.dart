@@ -8,21 +8,18 @@ typedef CustomFormFieldSetter = void Function(String? newValue, String key);
 enum FormFieldType { text, image, date }
 
 class CustomFormField extends StatelessWidget {
-  const CustomFormField(
-      {Key? key,
-      required this.props,
-      this.onSaved,
-      this.type = FormFieldType.text})
-      : assert(type == FormFieldType.text),
-        super(key: key);
+  const CustomFormField({
+    Key? key,
+    required this.props,
+    this.onSaved,
+  }) : super(key: key);
 
   final CustomFormFieldProps props;
   final CustomFormFieldSetter? onSaved;
-  final FormFieldType? type;
 
   @override
   Widget build(BuildContext context) {
-    if (this.type == FormFieldType.text) {
+    if (props["type"] == FormFieldType.text) {
       var formFieldData = CustomTextFormFieldProps.fromJson(props);
       return TextFormField(
         onSaved: (value) {

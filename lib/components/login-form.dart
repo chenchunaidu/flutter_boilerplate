@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_biolerlate/components/form/custom-form-field.dart';
 import 'package:flutter_biolerlate/components/form/index.dart';
 import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:get/get.dart';
@@ -6,6 +7,7 @@ import 'form/validators.dart';
 
 List<Map<String, dynamic>> loginForm = [
   {
+    "type": FormFieldType.text,
     "name": "email",
     "placeholder": "Email",
     "validator": CustomValidators().emailValidator(),
