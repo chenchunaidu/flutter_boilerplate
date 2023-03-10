@@ -68,6 +68,8 @@ BorderedImage(
 
 Wrapper around the flutter form for making form handling easy. Instead of writing flutter code everytime you can define your form in List of Maps which contains all the form details like placeholder, validator, helperText CustomForm will handle everything for you.
 
+Support `TextInput` and `DateInput` now
+
 ```dart
 List<Map<String, dynamic>> otpForm = [
   {
