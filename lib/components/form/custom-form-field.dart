@@ -1,6 +1,7 @@
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
-import './custom-text-form-field-props.dart';
+import './custom-text-form-field-model.dart';
+import './custom-date-form-field-model.dart';
 
 typedef CustomFormFieldProps = Map<String, dynamic>;
 typedef CustomFormFieldSetter = void Function(String? newValue, String key);
@@ -20,7 +21,7 @@ class CustomFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (props["type"] == FormFieldType.text) {
-      var formFieldData = CustomTextFormFieldProps.fromJson(props);
+      var formFieldData = CustomTextFormFieldModel.fromJson(props);
       return TextFormField(
         onSaved: (value) {
           onSaved!(value, formFieldData.name);
@@ -34,7 +35,7 @@ class CustomFormField extends StatelessWidget {
             helperText: formFieldData.helperText),
       );
     } else if (props["type"] == FormFieldType.date) {
-      var formFieldData = CustomTextFormFieldProps.fromJson(props);
+      var formFieldData = CustomDateFormFieldModel.fromJson(props);
       return DateTimePicker(
         initialValue: '',
         dateHintText: formFieldData.placeholder,

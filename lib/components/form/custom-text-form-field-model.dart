@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/form/validators.dart';
 
-class CustomTextFormFieldProps<T> {
+class CustomTextFormFieldModel<T> {
   final String? placeholder;
   // TODO: Allow generic properties;
   final FormFieldValidator<String>? validator;
@@ -12,7 +12,7 @@ class CustomTextFormFieldProps<T> {
   final bool? obscureText;
   final bool? autocorrect;
 
-  CustomTextFormFieldProps(
+  CustomTextFormFieldModel(
       {this.placeholder,
       this.validator,
       this.keyboardType,
@@ -22,8 +22,8 @@ class CustomTextFormFieldProps<T> {
       this.helperText,
       this.autocorrect});
   // TODO: Type safety for map
-  factory CustomTextFormFieldProps.fromJson(Map<String, dynamic> json) =>
-      CustomTextFormFieldProps(
+  factory CustomTextFormFieldModel.fromJson(Map<String, dynamic> json) =>
+      CustomTextFormFieldModel(
           placeholder: json["placeholder"] as String,
           helperText: json["helperText"] as String?,
           validator: json["validator"] as FormFieldValidator<String>?,
