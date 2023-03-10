@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/layout/auth.dart';
 import 'package:flutter_biolerlate/layout/get-page-wrapper.dart';
 import 'package:flutter_biolerlate/screens/account.dart';
 import 'package:flutter_biolerlate/screens/calendar.dart';
@@ -9,6 +8,7 @@ import 'package:flutter_biolerlate/screens/login.dart';
 import 'package:flutter_biolerlate/screens/otp.dart';
 import 'package:flutter_biolerlate/theme/index.dart';
 import 'package:get/get.dart';
+import 'package:flutter_biolerlate/helpers/auth.dart';
 
 void initialize() {
   // inject authentication controller

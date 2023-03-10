@@ -4,7 +4,7 @@ import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:get/get.dart';
 import 'form/validators.dart';
-import '../layout/auth.dart';
+import '../helpers/auth.dart';
 
 List<Map<String, dynamic>> otpForm = [
   {
