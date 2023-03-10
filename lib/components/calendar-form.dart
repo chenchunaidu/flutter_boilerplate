@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../theme/font.dart';
-import 'form/custom-form-field.dart';
-import 'form/index.dart';
+import 'common/form/custom-form-field.dart';
+import 'common/form/index.dart';
 
 List<Map<String, dynamic>> calendarForm = [
   {

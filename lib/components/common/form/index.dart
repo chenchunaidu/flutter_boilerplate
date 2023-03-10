@@ -1,8 +1,8 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/components/vstack.dart';
-import '../../theme/inset.dart';
+import 'package:flutter_biolerlate/components/common/vstack.dart';
+import '../../../theme/inset.dart';
 import './custom-text-form-field-model.dart';
 import 'custom-form-field.dart';
 

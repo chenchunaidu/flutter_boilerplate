@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/components/form/custom-form-field.dart';
-import 'package:flutter_biolerlate/components/form/index.dart';
+import 'package:flutter_biolerlate/components/common/form/custom-form-field.dart';
+import 'package:flutter_biolerlate/components/common/form/index.dart';
 import 'package:flutter_biolerlate/theme/font.dart';
 import 'package:get/get.dart';
-import 'form/validators.dart';
+import 'common/form/validators.dart';
 
 List<Map<String, dynamic>> loginForm = [
   {

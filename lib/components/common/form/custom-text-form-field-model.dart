@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_biolerlate/components/form/validators.dart';
+import 'package:flutter_biolerlate/components/common/form/validators.dart';
 
 class CustomTextFormFieldModel<T> {
   final String? placeholder;

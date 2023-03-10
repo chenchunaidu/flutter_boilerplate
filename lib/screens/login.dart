@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biolerlate/components/auth-info.dart';
 import 'package:flutter_biolerlate/components/login-form.dart';
-import 'package:flutter_biolerlate/components/vstack.dart';
+import 'package:flutter_biolerlate/components/common/vstack.dart';
 import 'package:flutter_biolerlate/theme/inset.dart';
 import 'package:get/get.dart';
 
