@@ -37,7 +37,7 @@ class CustomFormField extends StatelessWidget {
       var formFieldData = CustomTextFormFieldProps.fromJson(props);
       return DateTimePicker(
         initialValue: '',
-        dateLabelText: formFieldData.placeholder,
+        dateHintText: formFieldData.placeholder,
         validator: formFieldData.validator,
         firstDate: DateTime(1900),
         lastDate: DateTime(2100),

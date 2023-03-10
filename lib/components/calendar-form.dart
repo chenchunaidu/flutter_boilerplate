@@ -7,9 +7,14 @@ import 'form/index.dart';
 List<Map<String, dynamic>> calendarForm = [
   {
     "type": FormFieldType.date,
-    "name": "date",
-    "placeholder": "Date",
-  }
+    "name": "startDate",
+    "placeholder": "Start Date",
+  },
+  {
+    "type": FormFieldType.date,
+    "name": "endDate",
+    "placeholder": "End Date",
+  },
 ];
 
 class CalendarForm extends StatelessWidget {
@@ -23,6 +28,9 @@ class CalendarForm extends StatelessWidget {
         "Submit",
         style: TextStyles.buttonText1,
       ),
+      onSubmit: (value) {
+        print(value);
+      },
     );
   }
 }
