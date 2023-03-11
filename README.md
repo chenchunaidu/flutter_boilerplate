@@ -95,7 +95,7 @@ BorderedImage(
 
 Wrapper around the flutter form for making form handling easy. Instead of writing flutter code everytime you can define your form in List of Maps which contains all the form details like placeholder, validator, helperText CustomForm will handle everything for you.
 
-Supports `TextInput` and `DateInput` now
+Supports `TextInput`, `DateInput` and `Checkbox` now
 
 ```dart
 List<Map<String, dynamic>> otpForm = [
@@ -119,7 +119,7 @@ class OTPForm extends StatelessWidget {
     return CustomForm(
       fields: otpForm,
       onSubmit: (value) {
-        print(value);
+        print(value); // All form field values in the form of Map<String, dynamic>
         if (value["otp"] == "12345") {
           login();
           Get.toNamed('/home');
@@ -135,7 +135,9 @@ class OTPForm extends StatelessWidget {
 
 ```
 
-Sometime you need to render multiple form fields in a row you can do that using the `type` `FormFieldType.row`
+#### Row
+
+Sometimes you need to render multiple form fields in a row you can do that using the `type` `FormFieldType.row`
 
 ```dart
 [
@@ -151,6 +153,11 @@ Sometime you need to render multiple form fields in a row you can do that using 
         "type": FormFieldType.text,
         "name": "interestRate",
         "placeholder": "Interest rate",
+      },
+      {
+        "type": FormFieldType.checkbox,
+        "name": "selected",
+        "title": "Selected",
       },
     ]
   },
