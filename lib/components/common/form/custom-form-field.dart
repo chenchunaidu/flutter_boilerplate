@@ -1,12 +1,35 @@
+import 'dart:ffi';
+
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/components/common/hstack.dart';
 import './custom-text-form-field-model.dart';
 import './custom-date-form-field-model.dart';
 
 typedef CustomFormFieldProps = Map<String, dynamic>;
 typedef CustomFormFieldSetter = void Function(String? newValue, String key);
 
-enum FormFieldType { text, image, date }
+enum FormFieldType { text, image, date, row }
+
+enum Direction { vertical, horizontal }
+
+List<Widget> generateFormFieldWidgets(
+    {required List<CustomFormFieldProps> fields,
+    CustomFormFieldSetter? onSaved,
+    Direction? direction,
+    double? width}) {
+  if (direction == Direction.horizontal) {
+    return fields.map((e) {
+      return SizedBox(
+        child: CustomFormField(props: e, onSaved: onSaved),
+        width: width,
+      );
+    }).toList();
+  }
+  return fields.map((e) {
+    return CustomFormField(props: e, onSaved: onSaved);
+  }).toList();
+}
 
 class CustomFormField extends StatelessWidget {
   const CustomFormField({
@@ -46,7 +69,18 @@ class CustomFormField extends StatelessWidget {
           onSaved!(value, formFieldData.name);
         },
       );
+    } else if (props["type"] == FormFieldType.row) {
+      return HStack(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: generateFormFieldWidgets(
+              fields: props["fields"],
+              onSaved: onSaved,
+              direction: Direction.horizontal,
+              width: (MediaQuery.of(context).size.width /
+                      props["fields"]!.length) *
+                  0.9));
     }
+
     return Container();
   }
 }

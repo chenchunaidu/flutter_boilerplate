@@ -5,7 +5,7 @@ import 'package:flutter_boilerplate/theme/font.dart';
 import 'package:get/get.dart';
 import 'common/form/validators.dart';
 
-List<Map<String, dynamic>> loginForm = [
+var loginForm = [
   {
     "type": FormFieldType.text,
     "name": "email",

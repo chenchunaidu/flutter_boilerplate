@@ -10,12 +10,17 @@ typedef FormSubmitClick<T> = void Function(dynamic? value);
 
 class CustomForm extends StatefulWidget {
   const CustomForm(
-      {Key? key, required this.fields, this.submitButtonChild, this.onSubmit})
+      {Key? key,
+      required this.fields,
+      this.submitButtonChild,
+      this.onSubmit,
+      this.spacing})
       : super(key: key);
 
   final List<CustomFormFieldProps> fields;
   final Widget? submitButtonChild;
   final FormSubmitClick? onSubmit;
+  final double? spacing;
 
   @override
   _CustomFormState createState() => _CustomFormState();
@@ -32,15 +37,12 @@ class _CustomFormState extends State<CustomForm> {
       key: _formKey,
       child: VStack(spacing: Insets.md, children: [
         VStack(
-            children: widget.fields.map((e) {
-          return CustomFormField(
-              props: e,
-              onSaved: (newValue, key) {
-                setState(() {
-                  formData[key] = newValue;
-                });
-              });
-        }).toList()),
+            spacing: widget.spacing ?? 8.0,
+            children: generateFormFieldWidgets(
+                fields: widget.fields,
+                onSaved: (value, key) {
+                  formData[key] = value;
+                })),
         SizedBox(
             width: double.infinity,
             child: ElevatedButton(

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/theme/inset.dart';
 
 import '../theme/font.dart';
 import 'common/form/custom-form-field.dart';
 import 'common/form/index.dart';
 
-List<Map<String, dynamic>> calendarForm = [
+var calendarForm = [
   {
     "type": FormFieldType.date,
     "name": "startDate",
@@ -15,6 +16,21 @@ List<Map<String, dynamic>> calendarForm = [
     "name": "endDate",
     "placeholder": "End Date",
   },
+  {
+    "type": FormFieldType.row,
+    "fields": [
+      {
+        "type": FormFieldType.text,
+        "name": "principleAmount",
+        "placeholder": "Principle",
+      },
+      {
+        "type": FormFieldType.text,
+        "name": "interestRate",
+        "placeholder": "Interest rate",
+      },
+    ]
+  },
 ];
 
 class CalendarForm extends StatelessWidget {
@@ -22,15 +38,18 @@ class CalendarForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomForm(
-      fields: calendarForm,
-      submitButtonChild: const Text(
-        "Submit",
-        style: TextStyles.buttonText1,
-      ),
-      onSubmit: (value) {
-        print(value);
-      },
-    );
+    return Padding(
+        padding: EdgeInsets.all(Insets.lg),
+        child: CustomForm(
+          fields: calendarForm,
+          spacing: Insets.lg,
+          submitButtonChild: const Text(
+            "Calculate",
+            style: TextStyles.buttonText1,
+          ),
+          onSubmit: (value) {
+            print(value);
+          },
+        ));
   }
 }

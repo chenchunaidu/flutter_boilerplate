@@ -7,7 +7,7 @@ import 'common/form/custom-form-field.dart';
 import 'common/form/validators.dart';
 import '../helpers/auth.dart';
 
-List<Map<String, dynamic>> otpForm = [
+var otpForm = [
   {
     "type": FormFieldType.text,
     "name": "otp",
