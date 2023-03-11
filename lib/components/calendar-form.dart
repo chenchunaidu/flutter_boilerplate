@@ -31,6 +31,11 @@ var calendarForm = [
       },
     ]
   },
+  {
+    "type": FormFieldType.checkbox,
+    "name": "compound",
+    "title": "Compound interest",
+  },
 ];
 
 class CalendarForm extends StatelessWidget {

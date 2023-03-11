@@ -1,15 +1,15 @@
-import 'dart:ffi';
-
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/components/common/form/checkbox-form-field-model.dart';
+import 'package:flutter_boilerplate/components/common/form/checkbox-form-field.dart';
 import 'package:flutter_boilerplate/components/common/hstack.dart';
 import './custom-text-form-field-model.dart';
 import './custom-date-form-field-model.dart';
 
 typedef CustomFormFieldProps = Map<String, dynamic>;
-typedef CustomFormFieldSetter = void Function(String? newValue, String key);
+typedef CustomFormFieldSetter<T> = void Function(T? newValue, String key);
 
-enum FormFieldType { text, image, date, row }
+enum FormFieldType { text, image, date, row, checkbox }
 
 enum Direction { vertical, horizontal }
 
@@ -21,8 +21,8 @@ List<Widget> generateFormFieldWidgets(
   if (direction == Direction.horizontal) {
     return fields.map((e) {
       return SizedBox(
-        child: CustomFormField(props: e, onSaved: onSaved),
         width: width,
+        child: CustomFormField(props: e, onSaved: onSaved),
       );
     }).toList();
   }
@@ -79,6 +79,14 @@ class CustomFormField extends StatelessWidget {
               width: (MediaQuery.of(context).size.width /
                       props["fields"]!.length) *
                   0.9));
+    } else if (props["type"] == FormFieldType.checkbox) {
+      var formFieldData = CheckboxFormFieldModel.fromJson(props);
+      return CheckboxFormField(
+        title: formFieldData.title,
+        onSaved: (value) {
+          onSaved!(value, formFieldData.name);
+        },
+      );
     }
 
     return Container();
