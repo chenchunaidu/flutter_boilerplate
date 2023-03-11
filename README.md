@@ -135,7 +135,7 @@ class OTPForm extends StatelessWidget {
 
 ```
 
-Sometime you need to render multiple form fields in a row you can do that using the `type` `row`
+Sometime you need to render multiple form fields in a row you can do that using the `type` `FormFieldType.row`
 
 ```dart
 [
