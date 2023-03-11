@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/components/common/vstack.dart';
 import 'package:flutter_boilerplate/theme/inset.dart';
 
 import '../theme/font.dart';
@@ -38,23 +41,35 @@ var calendarForm = [
   },
 ];
 
-class CalendarForm extends StatelessWidget {
+class CalendarForm extends StatefulWidget {
   const CalendarForm({Key? key}) : super(key: key);
 
   @override
+  _CalendarFormState createState() => _CalendarFormState();
+}
+
+class _CalendarFormState extends State<CalendarForm> {
+  Map<String, dynamic> data = {};
+
+  @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.all(Insets.lg),
-        child: CustomForm(
-          fields: calendarForm,
-          spacing: Insets.lg,
-          submitButtonChild: const Text(
-            "Calculate",
-            style: TextStyles.buttonText1,
-          ),
-          onSubmit: (value) {
-            print(value);
-          },
-        ));
+    return VStack(children: [
+      Padding(
+          padding: EdgeInsets.all(Insets.lg),
+          child: CustomForm(
+            fields: calendarForm,
+            spacing: Insets.lg,
+            submitButtonChild: const Text(
+              "Calculate",
+              style: TextStyles.buttonText1,
+            ),
+            onSubmit: (value) {
+              setState(() {
+                this.data = value;
+              });
+            },
+          )),
+      Text(jsonEncode(data))
+    ]);
   }
 }
