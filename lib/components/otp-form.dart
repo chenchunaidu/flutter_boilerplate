@@ -31,7 +31,7 @@ class OTPForm extends StatelessWidget {
         print(value);
         if (value["otp"] == "12345") {
           login();
-          Get.toNamed('/home');
+          Get.toNamed('/calendar');
         }
       },
       submitButtonChild: const Text(
