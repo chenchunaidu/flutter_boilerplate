@@ -9,7 +9,7 @@ var loginForm = [
   {
     "type": FormFieldType.text,
     "name": "email",
-    "placeholder": "Email",
+    "placeholder": "Email".tr,
     "validator": CustomValidators().emailValidator(),
     "keyboardType": TextInputType.emailAddress
   }
@@ -25,8 +25,8 @@ class LoginForm extends StatelessWidget {
       onSubmit: (value) {
         Get.toNamed('/otp');
       },
-      submitButtonChild: const Text(
-        "Send OTP",
+      submitButtonChild: Text(
+        "Send OTP".tr,
         style: TextStyles.buttonText1,
       ),
     );

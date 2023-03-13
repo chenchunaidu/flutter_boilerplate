@@ -37,6 +37,7 @@ dependencies:
   get: ^4.6.5
   form_validator: ^2.1.1
   date_time_picker: ^2.1.0
+  get_storage: ^2.1.1
 
 dev_dependencies:
   flutter_test:
