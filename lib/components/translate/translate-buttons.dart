@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/components/common/hstack.dart';
 import 'package:flutter_boilerplate/components/translate/translate-button.dart';
 
 import '../../theme/inset.dart';
@@ -14,16 +15,13 @@ class TranslateButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return VStack(mainAxisAlignment: MainAxisAlignment.center, children: [
-      const Text('Choose your language'),
-      VStack(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        spacing: Insets.sm,
-        children: translateButtonsData
-            .map((e) => TranslateButton(locale: e.locale, label: e.label))
-            .toList(),
-      )
-    ]);
+    return HStack(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      spacing: Insets.sm,
+      children: translateButtonsData
+          .map((e) => TranslateButton(locale: e.locale, label: e.label))
+          .toList(),
+    );
   }
 }

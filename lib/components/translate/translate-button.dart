@@ -13,12 +13,11 @@ class TranslateButton extends StatelessWidget {
     storage.write("locale-language", locale.languageCode);
     storage.write("locale-country", locale.countryCode);
     Get.updateLocale(locale);
-    Get.toNamed('/login');
   }
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return TextButton(
       onPressed: onClick,
       child: Text(label),
     );

@@ -6,7 +6,6 @@ import 'package:flutter_boilerplate/screens/content.dart';
 import 'package:flutter_boilerplate/screens/home.dart';
 import 'package:flutter_boilerplate/screens/login.dart';
 import 'package:flutter_boilerplate/screens/otp.dart';
-import 'package:flutter_boilerplate/screens/translate.dart';
 import 'package:flutter_boilerplate/theme/index.dart';
 import 'package:get/get.dart';
 import 'package:flutter_boilerplate/helpers/auth.dart';
@@ -35,10 +34,8 @@ class MyApp extends StatelessWidget {
       locale: Locale(storage.read("locale-language") ?? 'hi',
           storage.read("locale-country") ?? 'IN'),
       translations: Messages(),
-      initialRoute: '/translate',
+      initialRoute: '/login',
       getPages: getPageWrapper([
-        PageWrapper(
-            path: '/translate', child: const Translate(), navbar: false),
         PageWrapper(path: '/login', child: Login(), navbar: false),
         PageWrapper(path: '/home', child: const Home()),
         PageWrapper(path: '/content', child: const Content()),
