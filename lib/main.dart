@@ -6,29 +6,39 @@ import 'package:flutter_boilerplate/screens/content.dart';
 import 'package:flutter_boilerplate/screens/home.dart';
 import 'package:flutter_boilerplate/screens/login.dart';
 import 'package:flutter_boilerplate/screens/otp.dart';
+import 'package:flutter_boilerplate/screens/translate.dart';
 import 'package:flutter_boilerplate/theme/index.dart';
 import 'package:get/get.dart';
 import 'package:flutter_boilerplate/helpers/auth.dart';
+import 'package:get_storage/get_storage.dart';
+
+import 'helpers/translations.dart';
 
 void initialize() {
   // inject authentication controller
   Get.put(AuthController());
 }
 
-void main() {
+void main() async {
   initialize();
-  runApp(const MyApp());
+  await GetStorage.init();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  MyApp({super.key});
+  GetStorage storage = GetStorage();
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/login',
+      locale: Locale(storage.read("locale-language") ?? 'hi',
+          storage.read("locale-country") ?? 'IN'),
+      translations: Messages(),
+      initialRoute: '/translate',
       getPages: getPageWrapper([
+        PageWrapper(
+            path: '/translate', child: const Translate(), navbar: false),
         PageWrapper(path: '/login', child: Login(), navbar: false),
         PageWrapper(path: '/home', child: const Home()),
         PageWrapper(path: '/content', child: const Content()),

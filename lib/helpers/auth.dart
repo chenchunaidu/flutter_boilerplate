@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-const publicRoutes = ["/login", "sign-up", "/", "/otp"];
+const publicRoutes = ["/login", "sign-up", "/", "/otp", "/translate"];
 
 class AuthController extends GetxController {
   var isAuthenticated = false.obs;

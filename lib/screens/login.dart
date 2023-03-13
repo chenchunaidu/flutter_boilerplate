@@ -11,21 +11,19 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: const VStack(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-          VStack(
-            spacing: Insets.xxl,
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AuthInfo(
-                label: "Welcome to\nFlutter boilerplate",
-                subLabel:
-                    "Sign in to Flutter boilerplate to check all features",
-              ),
-              LoginForm()
-            ],
-          )
-        ]));
+        child:
+            VStack(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+      VStack(
+        spacing: Insets.xxl,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AuthInfo(
+            label: "Welcome to\nFlutter boilerplate".tr,
+            subLabel: "Sign in to Flutter boilerplate to check all features".tr,
+          ),
+          LoginForm()
+        ],
+      )
+    ]));
   }
 }
