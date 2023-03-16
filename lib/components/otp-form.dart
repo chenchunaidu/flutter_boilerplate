@@ -16,6 +16,7 @@ var otpForm = [
     "helperText": "OTP is 12345 😃",
     "autocorrect": false,
     "obscureText": true,
+    "keyboardType": TextInputType.number
   }
 ];
 
